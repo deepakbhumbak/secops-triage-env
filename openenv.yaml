@@ -1,0 +1,10 @@
+spec_version: "1.0"
+env_name: "secops-triage-env"
+description: "An enterprise-grade environment training agents to triage corporate inboxes and prevent phishing."
+tasks:
+  - task_id: "easy_basic_spam"
+    difficulty: "easy"
+  - task_id: "medium_spear_phishing"
+    difficulty: "medium"
+  - task_id: "hard_full_triage"
+    difficulty: "hard"
