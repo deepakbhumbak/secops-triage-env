@@ -8,11 +8,10 @@ env = SecOpsTriageEnv()
 @app.post("/reset")
 async def reset():
     obs, _ = env.reset()
-    return obs  # OpenEnv expects just the observation back
+    return obs
 
 @app.post("/step")
 async def step(request: Request):
-    # The grader sends the AI's action as a JSON payload
     action = await request.json()
     obs, reward, done, truncated, info = env.step(action)
     
@@ -27,7 +26,13 @@ async def step(request: Request):
 async def state():
     return env.state()
 
-# Health check so Hugging Face knows the server is alive
 @app.get("/")
 async def root():
     return {"status": "Running", "environment": "SecOps Triage"}
+
+# --- THE FIX FOR THE SCALER AUTOGRADER ---
+def main():
+    uvicorn.run("server.app:app", host="0.0.0.0", port=7860)
+
+if __name__ == '__main__':
+    main()git add .
