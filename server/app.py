@@ -30,7 +30,6 @@ async def state():
 async def root():
     return {"status": "Running", "environment": "SecOps Triage"}
 
-# --- THE FIX FOR THE SCALER AUTOGRADER ---
 def main():
     uvicorn.run("server.app:app", host="0.0.0.0", port=7860)
 
