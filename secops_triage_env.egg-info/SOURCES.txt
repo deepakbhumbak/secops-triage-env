@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+secops_triage_env.egg-info/PKG-INFO
+secops_triage_env.egg-info/SOURCES.txt
+secops_triage_env.egg-info/dependency_links.txt
+secops_triage_env.egg-info/entry_points.txt
+secops_triage_env.egg-info/requires.txt
+secops_triage_env.egg-info/top_level.txt
+server/app.py
