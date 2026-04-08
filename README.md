@@ -10,3 +10,5 @@ This OpenEnv environment simulates a Level 1 Security Analyst's workflow. AI age
 * **Pydantic Validation:** Strict Action and Observation spaces.
 * **Partial Rewards:** Agents are rewarded for following safety protocols (e.g., inspecting links before quarantining) and heavily penalized for destroying safe emails.
 * **Deterministic Graders:** Easy, Medium, and Hard task evaluations.
+
+* 
